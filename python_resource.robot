@@ -19,6 +19,8 @@ ${test_browser}    chrome
 ${python_username}    18682236985
 ${python_password}    123456
 
+${python_qqusername}                        2710614370
+${python_qqpassword}                        pyf.18772939709
 
 
 # element管理
@@ -82,6 +84,28 @@ ${python_不存在提示}                        xpath://p[text()='没找到相�
 
 ${python_+号按钮}                           css:.creat-btn_2RJlL
 ${python_+号按钮_hover}                     css:.vh-center.create_list_AgaJH
+${python_python}                            xpath://span[text()='Python']
+${python_硬件}                              xpath://span[text()='硬件']
+
+${python_signup1_button}                     css:.button__2Rs4U.base_button__XBE-5.white__2VI82
+${python_sign_phonenum}                     xpath://input[@placeholder='手机号']
+${python_sign_passwd}                       xpath://input[@placeholder='密码']
+${python_sign_prove}                        xpath://input[@placeholder='验证码']
+${python_signup2_button}                     xpath://span[text()='注册']
+${python_sign_error_text}                   css:.error_2Je9a
+${python_signup_close}                      css:.icon__ERYBL.icon-close__2dQFw
+${python_login_error_text}                  css:.error_2Je9a
+
+
+${python_第三方登录}                        xpath://span[text()='第三方登录']
+${python_QQ登录}                              xpath://span[text()='第三方登录']//following-sibling::span[1]
+${python_微信登录}                            xpath=//span[text()='第三方登录']//following-sibling::span[2]
+${python_QQiframe}                            xpath=//*[@id="ptlogin_iframe"]
+${python_QQ账号登录}                          css=#switcher_plogin
+${python_QQ账号框}                            xpath=//*[@id="u"]
+${python_QQ密码框}                            xpath=//*[@id="p"]
+${python_QQ登录按钮}                          xpath=//*[@id="login_button"]
+
 
 # 关键字管理
 *** Keywords ***
@@ -143,8 +167,6 @@ login
     input text    ${python_login用户名}    ${python_username}
     input text    ${python_login密码}    ${python_password}
     Click Element    ${python_登录按钮}
-    Wait Until Page Does Not Contain Element    ${python_登录/注册}
-
 
 Myfile_checklogin
     assert_login_exist
@@ -170,6 +192,32 @@ My filesToSearch
     ...    ELSE IF    '${file_typeName}' == '硬件作品' and '${file_name}' == 'microbit'    Page Should Contain Element    ${python_作品1}
     ...    ELSE IF    '${file_typeName}' == '硬件作品' and '${file_name}' == '斐波那契'    Page Should Contain Element    ${python_不存在提示}
     Clear Element Text    ${python_搜索作品}
+
+
+Open Signup
+    Click Element    ${python_登录/注册}
+    Click Element    ${python_signup1_button}
+
+
+Signup Failed
+    [Arguments]    ${sign_phonenum}    ${sign_passwd}    ${prove_code}    ${error}
+    Open Signup
+    Input Text    ${python_sign_phonenum}    ${sign_phonenum}
+    Input Text    ${python_sign_passwd}    ${sign_passwd}
+    Input Text    ${python_sign_prove}    ${prove_code}
+    Click Element    ${python_signup2_button}
+    Element Should Contain    ${python_sign_error_text}    ${error}
+    Click Element    ${python_signup_close}
+
+
+Login Failed
+    [Arguments]    ${username}    ${password}    ${error}
+    Click Element    ${python_登录/注册}
+    input text    ${python_login用户名}    ${username}
+    input text    ${python_login密码}    ${password}
+    Click Element    ${python_登录按钮}
+    Element Should Contain    ${python_login_error_text}    ${error}
+    Click Element    ${python_login_close}
 
 
 

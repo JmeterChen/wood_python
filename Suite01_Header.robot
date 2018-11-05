@@ -67,6 +67,7 @@ My files
     assert_login_exist
     Click Element    ${python_我的作品}
     login
+    Wait Until Page Does Not Contain Element    ${python_登录/注册}
     Click Element    ${python_我的作品}
     ${Current_URL}=    Get Location
     Should End With    ${Current_URL}    work
@@ -118,7 +119,88 @@ My files_Newfile
     Run Keyword If    '${Current_URL[-4:]}' == '.cn/'    Myfile_checklogin
     Execute Javascript    document.getElementsByClassName('creat-btn_2RJlL')[0].click()
     Element Should Be Visible    ${python_+号按钮_hover}    Python
+    Click Element    ${python_python}
+    Sleep    1
+    Select Window    NEW
+    ${Current_URL}=    Get Location
+    Should End With    ${Current_URL}    codemao.cn/
+    Close Window
+    Select Window    海龟编辑器官方下载_Python编辑器_少儿编程编辑器_图形化编程编辑器-编程猫
+    Execute Javascript    document.getElementsByClassName('creat-btn_2RJlL')[0].click()
     Element Should Be Visible    ${python_+号按钮_hover}    硬件
+    Click Element    ${python_硬件}
+    Sleep    1
+    Select Window    NEW
+    ${Current_URL}=    Get Location
+    Should End With    ${Current_URL}    editor_mode=1
+    Close Window
+    Select Window    海龟编辑器官方下载_Python编辑器_少儿编程编辑器_图形化编程编辑器-编程猫
+
+
+signup failed
+    [Documentation]    验证输入非法格式的用户名或密码会给出对应提示
+    ...                Data-driven testing
+    [Template]    Signup Failed
+    # 手机号        密码        验证码       错误提示
+    ${EMPTY}       12345       123456      手机号不能为空
+    1111111111     12345       123456      手机格式不正确
+    aaaaaaaaaaa    12345       123456      手机格式不正确
+    11111111111    ${EMPTY}    123456      密码不能为空
+    11111111111    12345       123456      密码格式错误，至少包含6个字符或数字
+    11111111111    123abc      ${EMPTY}    验证码不能为空
+    11111111111    abcdef      1           获取验证码失败，请重新尝试
+    11111111111    abcdef      123456      获取验证码失败，请重新尝试
+
+
+login failed
+    [Documentation]    验证输入错误的用户名和密码会给出对应提示
+    ...                Data-driven testing
+    [Template]    Login Failed
+    # 用户名             密码                 错误提示
+    ${EMPTY}            ${python_password}    用户名不能为空
+    ${python_username}    ${EMPTY}            密码不能为空
+    ${python_username}    123                 用户名或密码不正确
+
+
+third_part
+    Click Element    ${python_登录/注册}
+    #验证登录页面含有第三方登录接口
+    Element Should Contain    ${python_第三方登录}    第三方登录
+    #验证通过QQ登录
+    Click Element    ${python_QQ登录}
+    Sleep    0.5
+    #跳转到QQ登录界面正常
+    Select Window    NEW
+    Title Should Be    QQ帐号安全登录
+    Close Window
+    Select Window    海龟编辑器官方下载_Python编辑器_少儿编程编辑器_图形化编程编辑器-编程猫
+    Click Element    ${python_登录/注册}
+    Sleep    0.3
+    Click Element    ${python_微信登录}
+    #跳转到微信登录界面正常
+    Select Window    NEW
+    Title Should Be    微信登录
+    Close Window
+    Select Window    海龟编辑器官方下载_Python编辑器_少儿编程编辑器_图形化编程编辑器-编程猫
+    Click Element    ${python_登录/注册}
+    Sleep    0.3
+    #验证通过QQ登录
+    Click Element    ${python_QQ登录}
+    Sleep    0.5
+    #跳转到QQ登录界面正常
+    Select Window    title=QQ帐号安全登录
+    Title Should Be    QQ帐号安全登录
+    Select Frame    ${python_QQiframe}
+    Mouse Over    ${python_QQ账号登录}
+    Click Element    ${python_QQ账号登录}
+    Sleep    0.2
+    Input Text    ${python_QQ账号框}    ${python_qqusername}
+    Input Text    ${python_QQ密码框}    ${python_qqpassword}
+    Click Element    ${python_QQ登录按钮}
+    Sleep    1
+    Select Window    title=海龟编辑器官方下载_Python编辑器_少儿编程编辑器_图形化编程编辑器-编程猫
+    Wait Until Page Does Not Contain Element    ${python_登录/注册}
+
 
 
 
