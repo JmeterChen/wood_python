@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20181105 23:23:58.539" generator="Robot 3.0.4 (Python 2.7.14 on win32)">
+<robot generated="20181106 20:00:10.565" generator="Robot 3.0.4 (Python 2.7.14 on win32)">
 <suite source="C:\Users\ChenBolin\Desktop\wood_python\Suite01_Header.robot" id="s1" name="Suite01 Header">
-<test id="s1-t1" name="My files_Newfile">
+<test id="s1-t1" name="My files_search">
 <kw type="setup" name="Open web" library="python_resource">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the given ``url``.</doc>
@@ -9,26 +9,26 @@
 <arg>${python_URL}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20181105 23:23:58.663" level="INFO">Opening browser 'chrome' to base url 'https://python.codemao.cn'.</msg>
-<status status="PASS" endtime="20181105 23:24:03.776" starttime="20181105 23:23:58.663"></status>
+<msg timestamp="20181106 20:00:10.694" level="INFO">Opening browser 'chrome' to base url 'https://python.codemao.cn'.</msg>
+<status status="PASS" endtime="20181106 20:00:15.332" starttime="20181106 20:00:10.693"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20181105 23:24:04.899" starttime="20181105 23:24:03.777"></status>
+<status status="PASS" endtime="20181106 20:00:16.451" starttime="20181106 20:00:15.332"></status>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <doc>Sets the delay that is waited after each Selenium command.</doc>
 <arguments>
 <arg>.6 seconds</arg>
 </arguments>
-<status status="PASS" endtime="20181105 23:24:04.899" starttime="20181105 23:24:04.899"></status>
+<status status="PASS" endtime="20181106 20:00:16.452" starttime="20181106 20:00:16.451"></status>
 </kw>
 <kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>10 seconds</arg>
 </arguments>
-<status status="PASS" endtime="20181105 23:24:05.501" starttime="20181105 23:24:04.899"></status>
+<status status="PASS" endtime="20181106 20:00:17.053" starttime="20181106 20:00:16.452"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
@@ -36,34 +36,39 @@
 <arg>${Current_URL}</arg>
 <arg>Get Location</arg>
 </arguments>
-<msg timestamp="20181105 23:24:05.502" level="INFO">${Current_URL} = Get Location</msg>
-<status status="PASS" endtime="20181105 23:24:05.502" starttime="20181105 23:24:05.501"></status>
+<msg timestamp="20181106 20:00:17.055" level="INFO">${Current_URL} = Get Location</msg>
+<status status="PASS" endtime="20181106 20:00:17.055" starttime="20181106 20:00:17.053"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>3</arg>
 </arguments>
-<msg timestamp="20181105 23:24:08.502" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" endtime="20181105 23:24:08.502" starttime="20181105 23:24:05.502"></status>
+<msg timestamp="20181106 20:00:20.055" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20181106 20:00:20.055" starttime="20181106 20:00:17.055"></status>
 </kw>
-<status status="PASS" endtime="20181105 23:24:08.502" starttime="20181105 23:23:58.663"></status>
+<status status="PASS" endtime="20181106 20:00:20.055" starttime="20181106 20:00:10.693"></status>
 </kw>
+<kw name="My filesToSearch" library="python_resource">
+<arguments>
+<arg>${python_全部作品}</arg>
+<arg>斐波那契</arg>
+</arguments>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${python_我的作品}</arg>
 </arguments>
-<msg timestamp="20181105 23:24:08.502" level="INFO">Clicking element 'xpath://a[text()='我的作品']'.</msg>
-<status status="PASS" endtime="20181105 23:24:09.762" starttime="20181105 23:24:08.502"></status>
+<msg timestamp="20181106 20:00:20.056" level="INFO">Clicking element 'xpath://a[text()='我的作品']'.</msg>
+<status status="PASS" endtime="20181106 20:00:21.316" starttime="20181106 20:00:20.055"></status>
 </kw>
 <kw name="Get Location" library="SeleniumLibrary">
 <doc>Returns the current browser URL.</doc>
 <assign>
 <var>${Current_URL}</var>
 </assign>
-<msg timestamp="20181105 23:24:10.367" level="INFO">${Current_URL} = https://python.codemao.cn/</msg>
-<status status="PASS" endtime="20181105 23:24:10.367" starttime="20181105 23:24:09.762"></status>
+<msg timestamp="20181106 20:00:21.922" level="INFO">${Current_URL} = https://python.codemao.cn/</msg>
+<status status="PASS" endtime="20181106 20:00:21.922" starttime="20181106 20:00:21.317"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -78,26 +83,26 @@
 <arguments>
 <arg>${python_登录页面}</arg>
 </arguments>
-<msg timestamp="20181105 23:24:11.592" level="INFO">Element 'css:.dialog-wrap__2Ypu3' is displayed.</msg>
-<status status="PASS" endtime="20181105 23:24:11.592" starttime="20181105 23:24:10.368"></status>
+<msg timestamp="20181106 20:00:23.149" level="INFO">Element 'css:.dialog-wrap__2Ypu3' is displayed.</msg>
+<status status="PASS" endtime="20181106 20:00:23.149" starttime="20181106 20:00:21.924"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${python_login_close}</arg>
 </arguments>
-<msg timestamp="20181105 23:24:11.592" level="INFO">Clicking element 'css:.close_btn_1zP1T'.</msg>
-<status status="PASS" endtime="20181105 23:24:12.846" starttime="20181105 23:24:11.592"></status>
+<msg timestamp="20181106 20:00:23.149" level="INFO">Clicking element 'css:.close_btn_1zP1T'.</msg>
+<status status="PASS" endtime="20181106 20:00:24.398" starttime="20181106 20:00:23.149"></status>
 </kw>
-<status status="PASS" endtime="20181105 23:24:12.846" starttime="20181105 23:24:10.368"></status>
+<status status="PASS" endtime="20181106 20:00:24.398" starttime="20181106 20:00:21.924"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${python_我的作品}</arg>
 </arguments>
-<msg timestamp="20181105 23:24:12.847" level="INFO">Clicking element 'xpath://a[text()='我的作品']'.</msg>
-<status status="PASS" endtime="20181105 23:24:14.092" starttime="20181105 23:24:12.847"></status>
+<msg timestamp="20181106 20:00:24.399" level="INFO">Clicking element 'xpath://a[text()='我的作品']'.</msg>
+<status status="PASS" endtime="20181106 20:00:25.639" starttime="20181106 20:00:24.398"></status>
 </kw>
 <kw name="login" library="python_resource">
 <kw name="Input Text" library="SeleniumLibrary">
@@ -106,8 +111,8 @@
 <arg>${python_login用户名}</arg>
 <arg>${python_username}</arg>
 </arguments>
-<msg timestamp="20181105 23:24:14.092" level="INFO">Typing text '18682236985' into text field 'xpath://input[@placeholder='用户名']'.</msg>
-<status status="PASS" endtime="20181105 23:24:16.011" starttime="20181105 23:24:14.092"></status>
+<msg timestamp="20181106 20:00:25.640" level="INFO">Typing text '18682236985' into text field 'xpath://input[@placeholder='用户名']'.</msg>
+<status status="PASS" endtime="20181106 20:00:27.553" starttime="20181106 20:00:25.640"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -115,177 +120,874 @@
 <arg>${python_login密码}</arg>
 <arg>${python_password}</arg>
 </arguments>
-<msg timestamp="20181105 23:24:16.011" level="INFO">Typing text '123456' into text field 'xpath://input[@placeholder='密码']'.</msg>
-<status status="PASS" endtime="20181105 23:24:17.907" starttime="20181105 23:24:16.011"></status>
+<msg timestamp="20181106 20:00:27.554" level="INFO">Typing text '123456' into text field 'xpath://input[@placeholder='密码']'.</msg>
+<status status="PASS" endtime="20181106 20:00:29.442" starttime="20181106 20:00:27.553"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${python_登录按钮}</arg>
 </arguments>
-<msg timestamp="20181105 23:24:17.907" level="INFO">Clicking element 'xpath://span[text()='登录']'.</msg>
-<status status="PASS" endtime="20181105 23:24:19.164" starttime="20181105 23:24:17.907"></status>
+<msg timestamp="20181106 20:00:29.443" level="INFO">Clicking element 'xpath://span[text()='登录']'.</msg>
+<status status="PASS" endtime="20181106 20:00:30.719" starttime="20181106 20:00:29.442"></status>
 </kw>
-<status status="PASS" endtime="20181105 23:24:19.164" starttime="20181105 23:24:14.092"></status>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` disappears from current page.</doc>
+<arguments>
+<arg>${python_登录/注册}</arg>
+</arguments>
+<status status="PASS" endtime="20181106 20:00:41.353" starttime="20181106 20:00:30.719"></status>
+</kw>
+<status status="PASS" endtime="20181106 20:00:41.353" starttime="20181106 20:00:25.639"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${python_我的作品}</arg>
 </arguments>
-<msg timestamp="20181105 23:24:19.164" level="INFO">Clicking element 'xpath://a[text()='我的作品']'.</msg>
-<status status="PASS" endtime="20181105 23:24:20.409" starttime="20181105 23:24:19.164"></status>
+<msg timestamp="20181106 20:00:41.354" level="INFO">Clicking element 'xpath://a[text()='我的作品']'.</msg>
+<status status="PASS" endtime="20181106 20:00:42.627" starttime="20181106 20:00:41.354"></status>
 </kw>
-<status status="PASS" endtime="20181105 23:24:20.410" starttime="20181105 23:24:10.367"></status>
+<status status="PASS" endtime="20181106 20:00:42.627" starttime="20181106 20:00:21.924"></status>
 </kw>
-<status status="PASS" endtime="20181105 23:24:20.410" starttime="20181105 23:24:10.367"></status>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<doc>Executes the given JavaScript code.</doc>
-<arguments>
-<arg>document.getElementsByClassName('creat-btn_2RJlL')[0].click()</arg>
-</arguments>
-<msg timestamp="20181105 23:24:20.411" level="INFO">Executing JavaScript:
-document.getElementsByClassName('creat-btn_2RJlL')[0].click()</msg>
-<status status="PASS" endtime="20181105 23:24:21.022" starttime="20181105 23:24:20.410"></status>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<arguments>
-<arg>${python_+号按钮_hover}</arg>
-<arg>Python</arg>
-</arguments>
-<msg timestamp="20181105 23:24:22.246" level="INFO">Element 'css:.vh-center.create_list_AgaJH' is displayed.</msg>
-<status status="PASS" endtime="20181105 23:24:22.246" starttime="20181105 23:24:21.022"></status>
+<status status="PASS" endtime="20181106 20:00:42.627" starttime="20181106 20:00:21.923"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>${python_python}</arg>
+<arg>${file_type}</arg>
 </arguments>
-<msg timestamp="20181105 23:24:22.246" level="INFO">Clicking element 'xpath://span[text()='Python']'.</msg>
-<status status="PASS" endtime="20181105 23:24:23.561" starttime="20181105 23:24:22.246"></status>
+<msg timestamp="20181106 20:00:42.627" level="INFO">Clicking element 'css:.type_DWla9.active_2Ozy6'.</msg>
+<status status="PASS" endtime="20181106 20:00:43.885" starttime="20181106 20:00:42.627"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
 <arguments>
-<arg>1</arg>
+<arg>${file_type}</arg>
 </arguments>
-<msg timestamp="20181105 23:24:24.562" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20181105 23:24:24.562" starttime="20181105 23:24:23.561"></status>
+<assign>
+<var>${file_typeName}</var>
+</assign>
+<msg timestamp="20181106 20:00:45.135" level="INFO">${file_typeName} = 全部作品</msg>
+<status status="PASS" endtime="20181106 20:00:45.135" starttime="20181106 20:00:43.886"></status>
 </kw>
-<kw name="Select Window" library="SeleniumLibrary">
-<doc>Selects browser window matching ``locator``.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
-<arg>NEW</arg>
+<arg>${python_搜索作品}</arg>
+<arg>${file_name}</arg>
 </arguments>
-<status status="PASS" endtime="20181105 23:24:27.697" starttime="20181105 23:24:24.562"></status>
+<msg timestamp="20181106 20:00:45.135" level="INFO">Typing text '斐波那契' into text field 'xpath://input[@placeholder='搜索']'.</msg>
+<status status="PASS" endtime="20181106 20:00:47.035" starttime="20181106 20:00:45.135"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${file_typeName}</arg>
+</arguments>
+<msg timestamp="20181106 20:00:47.035" level="INFO">全部作品</msg>
+<status status="PASS" endtime="20181106 20:00:47.035" starttime="20181106 20:00:47.035"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${file_name}</arg>
+</arguments>
+<msg timestamp="20181106 20:00:47.036" level="INFO">斐波那契</msg>
+<status status="PASS" endtime="20181106 20:00:47.036" starttime="20181106 20:00:47.035"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == 'xxxxx'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == 'Python作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == 'Python作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '硬件作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '硬件作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${python_作品1}</arg>
+</arguments>
+<msg timestamp="20181106 20:00:47.649" level="INFO">Current page contains element 'css:.vh-center.project-wrapper_uv7Es&gt;div'.</msg>
+<status status="PASS" endtime="20181106 20:00:47.649" starttime="20181106 20:00:47.036"></status>
+</kw>
+<status status="PASS" endtime="20181106 20:00:47.650" starttime="20181106 20:00:47.036"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${python_搜索作品}</arg>
+</arguments>
+<status status="PASS" endtime="20181106 20:00:48.874" starttime="20181106 20:00:47.650"></status>
+</kw>
+<status status="PASS" endtime="20181106 20:00:48.874" starttime="20181106 20:00:20.055"></status>
+</kw>
+<kw name="My filesToSearch" library="python_resource">
+<arguments>
+<arg>${python_全部作品}</arg>
+<arg>microbit</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${python_我的作品}</arg>
+</arguments>
+<msg timestamp="20181106 20:00:48.875" level="INFO">Clicking element 'xpath://a[text()='我的作品']'.</msg>
+<status status="PASS" endtime="20181106 20:00:50.113" starttime="20181106 20:00:48.874"></status>
 </kw>
 <kw name="Get Location" library="SeleniumLibrary">
 <doc>Returns the current browser URL.</doc>
 <assign>
 <var>${Current_URL}</var>
 </assign>
-<msg timestamp="20181105 23:24:29.312" level="INFO">${Current_URL} = https://wood.codemao.cn/</msg>
-<status status="PASS" endtime="20181105 23:24:29.312" starttime="20181105 23:24:27.697"></status>
+<msg timestamp="20181106 20:00:50.719" level="INFO">${Current_URL} = https://python.codemao.cn/work</msg>
+<status status="PASS" endtime="20181106 20:00:50.719" starttime="20181106 20:00:50.113"></status>
 </kw>
-<kw name="Should End With" library="BuiltIn">
-<doc>Fails if the string ``str1`` does not end with the string ``str2``.</doc>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
 <arguments>
-<arg>${Current_URL}</arg>
-<arg>codemao.cn/</arg>
+<arg>'${Current_URL[-4:]}' == '.cn/'</arg>
+<arg>Myfile_checklogin</arg>
 </arguments>
-<status status="PASS" endtime="20181105 23:24:29.313" starttime="20181105 23:24:29.312"></status>
-</kw>
-<kw name="Close Window" library="SeleniumLibrary">
-<doc>Closes currently opened pop-up window.</doc>
-<status status="PASS" endtime="20181105 23:24:29.968" starttime="20181105 23:24:29.313"></status>
-</kw>
-<kw name="Select Window" library="SeleniumLibrary">
-<doc>Selects browser window matching ``locator``.</doc>
-<arguments>
-<arg>海龟编辑器官方下载_Python编辑器_少儿编程编辑器_图形化编程编辑器-编程猫</arg>
-</arguments>
-<status status="PASS" endtime="20181105 23:24:33.594" starttime="20181105 23:24:29.968"></status>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<doc>Executes the given JavaScript code.</doc>
-<arguments>
-<arg>document.getElementsByClassName('creat-btn_2RJlL')[0].click()</arg>
-</arguments>
-<msg timestamp="20181105 23:24:33.594" level="INFO">Executing JavaScript:
-document.getElementsByClassName('creat-btn_2RJlL')[0].click()</msg>
-<status status="PASS" endtime="20181105 23:24:34.200" starttime="20181105 23:24:33.594"></status>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<arguments>
-<arg>${python_+号按钮_hover}</arg>
-<arg>硬件</arg>
-</arguments>
-<msg timestamp="20181105 23:24:35.423" level="INFO">Element 'css:.vh-center.create_list_AgaJH' is displayed.</msg>
-<status status="PASS" endtime="20181105 23:24:35.423" starttime="20181105 23:24:34.200"></status>
+<status status="PASS" endtime="20181106 20:00:50.720" starttime="20181106 20:00:50.719"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>${python_硬件}</arg>
+<arg>${file_type}</arg>
 </arguments>
-<msg timestamp="20181105 23:24:35.424" level="INFO">Clicking element 'xpath://span[text()='硬件']'.</msg>
-<status status="PASS" endtime="20181105 23:24:36.722" starttime="20181105 23:24:35.423"></status>
+<msg timestamp="20181106 20:00:50.720" level="INFO">Clicking element 'css:.type_DWla9.active_2Ozy6'.</msg>
+<status status="PASS" endtime="20181106 20:00:51.948" starttime="20181106 20:00:50.720"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
 <arguments>
-<arg>1</arg>
+<arg>${file_type}</arg>
 </arguments>
-<msg timestamp="20181105 23:24:37.722" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20181105 23:24:37.723" starttime="20181105 23:24:36.722"></status>
+<assign>
+<var>${file_typeName}</var>
+</assign>
+<msg timestamp="20181106 20:00:53.162" level="INFO">${file_typeName} = 全部作品</msg>
+<status status="PASS" endtime="20181106 20:00:53.162" starttime="20181106 20:00:51.948"></status>
 </kw>
-<kw name="Select Window" library="SeleniumLibrary">
-<doc>Selects browser window matching ``locator``.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
-<arg>NEW</arg>
+<arg>${python_搜索作品}</arg>
+<arg>${file_name}</arg>
 </arguments>
-<status status="PASS" endtime="20181105 23:24:40.133" starttime="20181105 23:24:37.723"></status>
+<msg timestamp="20181106 20:00:53.163" level="INFO">Typing text 'microbit' into text field 'xpath://input[@placeholder='搜索']'.</msg>
+<status status="PASS" endtime="20181106 20:00:55.031" starttime="20181106 20:00:53.162"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${file_typeName}</arg>
+</arguments>
+<msg timestamp="20181106 20:00:55.031" level="INFO">全部作品</msg>
+<status status="PASS" endtime="20181106 20:00:55.031" starttime="20181106 20:00:55.031"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${file_name}</arg>
+</arguments>
+<msg timestamp="20181106 20:00:55.031" level="INFO">microbit</msg>
+<status status="PASS" endtime="20181106 20:00:55.032" starttime="20181106 20:00:55.031"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == 'xxxxx'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == 'Python作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == 'Python作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '硬件作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '硬件作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${python_作品1}</arg>
+</arguments>
+<msg timestamp="20181106 20:00:55.639" level="INFO">Current page contains element 'css:.vh-center.project-wrapper_uv7Es&gt;div'.</msg>
+<status status="PASS" endtime="20181106 20:00:55.639" starttime="20181106 20:00:55.032"></status>
+</kw>
+<status status="PASS" endtime="20181106 20:00:55.640" starttime="20181106 20:00:55.032"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${python_搜索作品}</arg>
+</arguments>
+<status status="PASS" endtime="20181106 20:00:56.865" starttime="20181106 20:00:55.640"></status>
+</kw>
+<status status="PASS" endtime="20181106 20:00:56.865" starttime="20181106 20:00:48.874"></status>
+</kw>
+<kw name="My filesToSearch" library="python_resource">
+<arguments>
+<arg>${python_全部作品}</arg>
+<arg>xxxxx</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${python_我的作品}</arg>
+</arguments>
+<msg timestamp="20181106 20:00:56.866" level="INFO">Clicking element 'xpath://a[text()='我的作品']'.</msg>
+<status status="PASS" endtime="20181106 20:00:58.099" starttime="20181106 20:00:56.866"></status>
 </kw>
 <kw name="Get Location" library="SeleniumLibrary">
 <doc>Returns the current browser URL.</doc>
 <assign>
 <var>${Current_URL}</var>
 </assign>
-<msg timestamp="20181105 23:24:41.750" level="INFO">${Current_URL} = https://wood.codemao.cn/?editor_mode=1</msg>
-<status status="PASS" endtime="20181105 23:24:41.750" starttime="20181105 23:24:40.133"></status>
+<msg timestamp="20181106 20:00:58.704" level="INFO">${Current_URL} = https://python.codemao.cn/work</msg>
+<status status="PASS" endtime="20181106 20:00:58.704" starttime="20181106 20:00:58.099"></status>
 </kw>
-<kw name="Should End With" library="BuiltIn">
-<doc>Fails if the string ``str1`` does not end with the string ``str2``.</doc>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
 <arguments>
-<arg>${Current_URL}</arg>
-<arg>editor_mode=1</arg>
+<arg>'${Current_URL[-4:]}' == '.cn/'</arg>
+<arg>Myfile_checklogin</arg>
 </arguments>
-<status status="PASS" endtime="20181105 23:24:41.751" starttime="20181105 23:24:41.750"></status>
+<status status="PASS" endtime="20181106 20:00:58.704" starttime="20181106 20:00:58.704"></status>
 </kw>
-<kw name="Close Window" library="SeleniumLibrary">
-<doc>Closes currently opened pop-up window.</doc>
-<status status="PASS" endtime="20181105 23:24:42.408" starttime="20181105 23:24:41.751"></status>
-</kw>
-<kw name="Select Window" library="SeleniumLibrary">
-<doc>Selects browser window matching ``locator``.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>海龟编辑器官方下载_Python编辑器_少儿编程编辑器_图形化编程编辑器-编程猫</arg>
+<arg>${file_type}</arg>
 </arguments>
-<status status="PASS" endtime="20181105 23:24:46.029" starttime="20181105 23:24:42.408"></status>
+<msg timestamp="20181106 20:00:58.705" level="INFO">Clicking element 'css:.type_DWla9.active_2Ozy6'.</msg>
+<status status="PASS" endtime="20181106 20:00:59.932" starttime="20181106 20:00:58.704"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${file_type}</arg>
+</arguments>
+<assign>
+<var>${file_typeName}</var>
+</assign>
+<msg timestamp="20181106 20:01:01.148" level="INFO">${file_typeName} = 全部作品</msg>
+<status status="PASS" endtime="20181106 20:01:01.148" starttime="20181106 20:00:59.932"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${python_搜索作品}</arg>
+<arg>${file_name}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:01.149" level="INFO">Typing text 'xxxxx' into text field 'xpath://input[@placeholder='搜索']'.</msg>
+<status status="PASS" endtime="20181106 20:01:03.005" starttime="20181106 20:01:01.148"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${file_typeName}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:03.006" level="INFO">全部作品</msg>
+<status status="PASS" endtime="20181106 20:01:03.006" starttime="20181106 20:01:03.006"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${file_name}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:03.006" level="INFO">xxxxx</msg>
+<status status="PASS" endtime="20181106 20:01:03.006" starttime="20181106 20:01:03.006"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == 'xxxxx'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == 'Python作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == 'Python作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '硬件作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '硬件作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${python_不存在提示}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:03.619" level="INFO">Current page contains element 'xpath://p[text()='没找到相关结果']'.</msg>
+<status status="PASS" endtime="20181106 20:01:03.619" starttime="20181106 20:01:03.007"></status>
+</kw>
+<status status="PASS" endtime="20181106 20:01:03.619" starttime="20181106 20:01:03.006"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${python_搜索作品}</arg>
+</arguments>
+<status status="PASS" endtime="20181106 20:01:04.843" starttime="20181106 20:01:03.620"></status>
+</kw>
+<status status="PASS" endtime="20181106 20:01:04.843" starttime="20181106 20:00:56.865"></status>
+</kw>
+<kw name="My filesToSearch" library="python_resource">
+<arguments>
+<arg>${python_Python作品}</arg>
+<arg>1111</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${python_我的作品}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:04.844" level="INFO">Clicking element 'xpath://a[text()='我的作品']'.</msg>
+<status status="PASS" endtime="20181106 20:01:06.079" starttime="20181106 20:01:04.844"></status>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser URL.</doc>
+<assign>
+<var>${Current_URL}</var>
+</assign>
+<msg timestamp="20181106 20:01:06.684" level="INFO">${Current_URL} = https://python.codemao.cn/work</msg>
+<status status="PASS" endtime="20181106 20:01:06.684" starttime="20181106 20:01:06.079"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Current_URL[-4:]}' == '.cn/'</arg>
+<arg>Myfile_checklogin</arg>
+</arguments>
+<status status="PASS" endtime="20181106 20:01:06.686" starttime="20181106 20:01:06.685"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${file_type}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:06.687" level="INFO">Clicking element 'xpath://span[text()='Python作品']'.</msg>
+<status status="PASS" endtime="20181106 20:01:07.945" starttime="20181106 20:01:06.686"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${file_type}</arg>
+</arguments>
+<assign>
+<var>${file_typeName}</var>
+</assign>
+<msg timestamp="20181106 20:01:09.166" level="INFO">${file_typeName} = Python作品</msg>
+<status status="PASS" endtime="20181106 20:01:09.167" starttime="20181106 20:01:07.945"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${python_搜索作品}</arg>
+<arg>${file_name}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:09.167" level="INFO">Typing text '1111' into text field 'xpath://input[@placeholder='搜索']'.</msg>
+<status status="PASS" endtime="20181106 20:01:11.018" starttime="20181106 20:01:09.167"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${file_typeName}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:11.018" level="INFO">Python作品</msg>
+<status status="PASS" endtime="20181106 20:01:11.018" starttime="20181106 20:01:11.018"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${file_name}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:11.019" level="INFO">1111</msg>
+<status status="PASS" endtime="20181106 20:01:11.019" starttime="20181106 20:01:11.018"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == 'xxxxx'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == 'Python作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == 'Python作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '硬件作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '硬件作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+</arguments>
+<status status="PASS" endtime="20181106 20:01:11.020" starttime="20181106 20:01:11.019"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${python_搜索作品}</arg>
+</arguments>
+<status status="PASS" endtime="20181106 20:01:12.243" starttime="20181106 20:01:11.020"></status>
+</kw>
+<status status="PASS" endtime="20181106 20:01:12.243" starttime="20181106 20:01:04.843"></status>
+</kw>
+<kw name="My filesToSearch" library="python_resource">
+<arguments>
+<arg>${python_Python作品}</arg>
+<arg>斐波那契</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${python_我的作品}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:12.244" level="INFO">Clicking element 'xpath://a[text()='我的作品']'.</msg>
+<status status="PASS" endtime="20181106 20:01:13.473" starttime="20181106 20:01:12.244"></status>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser URL.</doc>
+<assign>
+<var>${Current_URL}</var>
+</assign>
+<msg timestamp="20181106 20:01:14.079" level="INFO">${Current_URL} = https://python.codemao.cn/work</msg>
+<status status="PASS" endtime="20181106 20:01:14.079" starttime="20181106 20:01:13.474"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Current_URL[-4:]}' == '.cn/'</arg>
+<arg>Myfile_checklogin</arg>
+</arguments>
+<status status="PASS" endtime="20181106 20:01:14.079" starttime="20181106 20:01:14.079"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${file_type}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:14.080" level="INFO">Clicking element 'xpath://span[text()='Python作品']'.</msg>
+<status status="PASS" endtime="20181106 20:01:15.310" starttime="20181106 20:01:14.080"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${file_type}</arg>
+</arguments>
+<assign>
+<var>${file_typeName}</var>
+</assign>
+<msg timestamp="20181106 20:01:16.529" level="INFO">${file_typeName} = Python作品</msg>
+<status status="PASS" endtime="20181106 20:01:16.529" starttime="20181106 20:01:15.310"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${python_搜索作品}</arg>
+<arg>${file_name}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:16.529" level="INFO">Typing text '斐波那契' into text field 'xpath://input[@placeholder='搜索']'.</msg>
+<status status="PASS" endtime="20181106 20:01:18.384" starttime="20181106 20:01:16.529"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${file_typeName}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:18.384" level="INFO">Python作品</msg>
+<status status="PASS" endtime="20181106 20:01:18.384" starttime="20181106 20:01:18.384"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${file_name}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:18.384" level="INFO">斐波那契</msg>
+<status status="PASS" endtime="20181106 20:01:18.384" starttime="20181106 20:01:18.384"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == 'xxxxx'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == 'Python作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == 'Python作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '硬件作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '硬件作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${python_作品1}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:18.993" level="INFO">Current page contains element 'css:.vh-center.project-wrapper_uv7Es&gt;div'.</msg>
+<status status="PASS" endtime="20181106 20:01:18.993" starttime="20181106 20:01:18.385"></status>
+</kw>
+<status status="PASS" endtime="20181106 20:01:18.993" starttime="20181106 20:01:18.385"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${python_搜索作品}</arg>
+</arguments>
+<status status="PASS" endtime="20181106 20:01:20.219" starttime="20181106 20:01:18.993"></status>
+</kw>
+<status status="PASS" endtime="20181106 20:01:20.219" starttime="20181106 20:01:12.243"></status>
+</kw>
+<kw name="My filesToSearch" library="python_resource">
+<arguments>
+<arg>${python_硬件作品}</arg>
+<arg>microbit</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${python_我的作品}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:20.220" level="INFO">Clicking element 'xpath://a[text()='我的作品']'.</msg>
+<status status="PASS" endtime="20181106 20:01:21.455" starttime="20181106 20:01:20.220"></status>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser URL.</doc>
+<assign>
+<var>${Current_URL}</var>
+</assign>
+<msg timestamp="20181106 20:01:22.061" level="INFO">${Current_URL} = https://python.codemao.cn/work</msg>
+<status status="PASS" endtime="20181106 20:01:22.061" starttime="20181106 20:01:21.455"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Current_URL[-4:]}' == '.cn/'</arg>
+<arg>Myfile_checklogin</arg>
+</arguments>
+<status status="PASS" endtime="20181106 20:01:22.062" starttime="20181106 20:01:22.061"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${file_type}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:22.062" level="INFO">Clicking element 'xpath://span[text()='硬件作品']'.</msg>
+<status status="PASS" endtime="20181106 20:01:23.319" starttime="20181106 20:01:22.062"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${file_type}</arg>
+</arguments>
+<assign>
+<var>${file_typeName}</var>
+</assign>
+<msg timestamp="20181106 20:01:24.540" level="INFO">${file_typeName} = 硬件作品</msg>
+<status status="PASS" endtime="20181106 20:01:24.540" starttime="20181106 20:01:23.319"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${python_搜索作品}</arg>
+<arg>${file_name}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:24.541" level="INFO">Typing text 'microbit' into text field 'xpath://input[@placeholder='搜索']'.</msg>
+<status status="PASS" endtime="20181106 20:01:26.395" starttime="20181106 20:01:24.540"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${file_typeName}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:26.396" level="INFO">硬件作品</msg>
+<status status="PASS" endtime="20181106 20:01:26.396" starttime="20181106 20:01:26.396"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${file_name}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:26.397" level="INFO">microbit</msg>
+<status status="PASS" endtime="20181106 20:01:26.397" starttime="20181106 20:01:26.397"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == 'xxxxx'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == 'Python作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == 'Python作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '硬件作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '硬件作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${python_作品1}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:27.007" level="INFO">Current page contains element 'css:.vh-center.project-wrapper_uv7Es&gt;div'.</msg>
+<status status="PASS" endtime="20181106 20:01:27.007" starttime="20181106 20:01:26.398"></status>
+</kw>
+<status status="PASS" endtime="20181106 20:01:27.007" starttime="20181106 20:01:26.397"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${python_搜索作品}</arg>
+</arguments>
+<status status="PASS" endtime="20181106 20:01:28.230" starttime="20181106 20:01:27.007"></status>
+</kw>
+<status status="PASS" endtime="20181106 20:01:28.230" starttime="20181106 20:01:20.220"></status>
+</kw>
+<kw name="My filesToSearch" library="python_resource">
+<arguments>
+<arg>${python_硬件作品}</arg>
+<arg>斐波那契</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${python_我的作品}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:28.231" level="INFO">Clicking element 'xpath://a[text()='我的作品']'.</msg>
+<status status="PASS" endtime="20181106 20:01:29.464" starttime="20181106 20:01:28.231"></status>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser URL.</doc>
+<assign>
+<var>${Current_URL}</var>
+</assign>
+<msg timestamp="20181106 20:01:30.077" level="INFO">${Current_URL} = https://python.codemao.cn/work</msg>
+<status status="PASS" endtime="20181106 20:01:30.077" starttime="20181106 20:01:29.464"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Current_URL[-4:]}' == '.cn/'</arg>
+<arg>Myfile_checklogin</arg>
+</arguments>
+<status status="PASS" endtime="20181106 20:01:30.077" starttime="20181106 20:01:30.077"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${file_type}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:30.078" level="INFO">Clicking element 'xpath://span[text()='硬件作品']'.</msg>
+<status status="PASS" endtime="20181106 20:01:31.306" starttime="20181106 20:01:30.077"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${file_type}</arg>
+</arguments>
+<assign>
+<var>${file_typeName}</var>
+</assign>
+<msg timestamp="20181106 20:01:32.522" level="INFO">${file_typeName} = 硬件作品</msg>
+<status status="PASS" endtime="20181106 20:01:32.522" starttime="20181106 20:01:31.306"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${python_搜索作品}</arg>
+<arg>${file_name}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:32.523" level="INFO">Typing text '斐波那契' into text field 'xpath://input[@placeholder='搜索']'.</msg>
+<status status="PASS" endtime="20181106 20:01:34.373" starttime="20181106 20:01:32.522"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${file_typeName}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:34.373" level="INFO">硬件作品</msg>
+<status status="PASS" endtime="20181106 20:01:34.373" starttime="20181106 20:01:34.373"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${file_name}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:34.374" level="INFO">斐波那契</msg>
+<status status="PASS" endtime="20181106 20:01:34.374" starttime="20181106 20:01:34.374"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '全部作品' and '${file_name}' == 'xxxxx'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == 'Python作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == 'Python作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '硬件作品' and '${file_name}' == 'microbit'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_作品1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${file_typeName}' == '硬件作品' and '${file_name}' == '斐波那契'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${python_不存在提示}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${python_不存在提示}</arg>
+</arguments>
+<msg timestamp="20181106 20:01:34.983" level="INFO">Current page contains element 'xpath://p[text()='没找到相关结果']'.</msg>
+<status status="PASS" endtime="20181106 20:01:34.983" starttime="20181106 20:01:34.375"></status>
+</kw>
+<status status="PASS" endtime="20181106 20:01:34.983" starttime="20181106 20:01:34.374"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${python_搜索作品}</arg>
+</arguments>
+<status status="PASS" endtime="20181106 20:01:36.208" starttime="20181106 20:01:34.984"></status>
+</kw>
+<status status="PASS" endtime="20181106 20:01:36.209" starttime="20181106 20:01:28.231"></status>
 </kw>
 <kw type="teardown" name="Teardown" library="python_resource">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" endtime="20181105 23:24:48.701" starttime="20181105 23:24:46.029"></status>
+<status status="PASS" endtime="20181106 20:01:38.860" starttime="20181106 20:01:36.209"></status>
 </kw>
-<status status="PASS" endtime="20181105 23:24:48.701" starttime="20181105 23:24:46.029"></status>
+<status status="PASS" endtime="20181106 20:01:38.861" starttime="20181106 20:01:36.209"></status>
 </kw>
-<status status="PASS" endtime="20181105 23:24:48.701" critical="yes" starttime="20181105 23:23:58.662"></status>
+<doc>点击不同按钮进入到help界面
+Data-driven testing</doc>
+<status status="PASS" endtime="20181106 20:01:38.861" critical="yes" starttime="20181106 20:00:10.692"></status>
 </test>
-<status status="PASS" endtime="20181105 23:24:48.702" starttime="20181105 23:23:58.542"></status>
+<status status="PASS" endtime="20181106 20:01:38.861" starttime="20181106 20:00:10.568"></status>
 </suite>
 <statistics>
 <total>

@@ -202,13 +202,18 @@ third_part
     Wait Until Page Does Not Contain Element    ${python_登录/注册}
 
 
+personal_center
+    [Documentation]    验证输入错误的用户名和密码会给出对应提示
+    ...                Data-driven testing
+    [Template]    Personal
+    # 预发布正式环境
+    ${python_个人中心}    378392
+    ${python_作品管理}    work/
+    ${python_账号设置}    setting
+
+    # 测试环境
+    # ${python_个人中心}    339191
+    # ${python_作品管理}    work/
+    # ${python_账号设置}    setting
 
 
-
-# la
-#     Click Element    css:.btn_3WmFh.download_btn_3MC2e
-#     Win Wait    另存为    \    2
-#     Win Exists    另存为
-#     Win Active    另存为
-#     Log    ${CURDIR}
-#     Sleep    0.5
