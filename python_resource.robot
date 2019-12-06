@@ -1,16 +1,16 @@
 # 变量管理
 *** Variables ***
-# ${python_URL}               https://dev-python.codemao.cn
-# ${python_URL}               https://staging-python.codemao.cn
-${python_URL}                 https://python.codemao.cn
+# ${python_URL}               https://dev-python.maocode.cn
+# ${python_URL}               https://staging-python.maocode.cn
+${python_URL}                 https://python.maocode.cn
 
-${wood_URL_dev}               https://dev-wood.codemao.cn
-${wood_URL_staging}           https://staging-wood.codemao.cn
-${wood_URL}                   https://wood.codemao.cn
+${wood_URL_dev}               https://dev-wood.maocode.cn
+${wood_URL_staging}           https://staging-wood.maocode.cn
+${wood_URL}                   https://wood.maocode.cn
 
-# ${user_URL}                 https://dev-www.codemao.cn
-# ${user_URL}                 https://staging-www.codemao.cn
-${user_URL}                   https://www.codemao.cn
+# ${user_URL}                 https://dev-www.maocode.cn
+# ${user_URL}                 https://staging-www.maocode.cn
+${user_URL}                   https://www.maocode.cn
 
 # 浏览器管理
 ${test_browser}               chrome
@@ -130,9 +130,9 @@ ButtonToWood
     Sleep    2
     Select Window    title=编程猫代码编辑器
     log    ${URL}
-    Run Keyword If    '${URL}' == 'https://dev-python.codemao.cn'    Location Should Be    ${wood_URL_dev}
-    ...    ELSE IF    '${URL}' == 'https://staging-python.codemao.cn'    Location Should Be    ${wood_URL_staging}
-    ...    ELSE IF    '${URL}' == 'https://python.codemao.cn'    Location Should Be    ${wood_URL}
+    Run Keyword If    '${URL}' == 'https://dev-python.maocode.cn'    Location Should Be    ${wood_URL_dev}
+    ...    ELSE IF    '${URL}' == 'https://staging-python.maocode.cn'    Location Should Be    ${wood_URL_staging}
+    ...    ELSE IF    '${URL}' == 'https://python.maocode.cn'    Location Should Be    ${wood_URL}
     Close Window
     Select Window    海龟编辑器官方下载_Python编辑器_少儿编程编辑器_图形化编程编辑器-编程猫
 
@@ -238,9 +238,9 @@ Personal
     Click Element    ${button_locator}
     Select Window    NEW
     ${Current_URL}=    Get Location
-    Run Keyword If    '${python_URL}' == 'https://dev-python.codemao.cn'    Should End With    ${Current_URL}    ${message}
-    ...    ELSE IF    '${python_URL}' == 'https://staging-python.codemao.cn'    Should End With    ${Current_URL}    ${message}
-    ...    ELSE IF    '${python_URL}' == 'https://python.codemao.cn'    Should End With    ${Current_URL}    ${message}
+    Run Keyword If    '${python_URL}' == 'https://dev-python.maocode.cn'    Should End With    ${Current_URL}    ${message}
+    ...    ELSE IF    '${python_URL}' == 'https://staging-python.maocode.cn'    Should End With    ${Current_URL}    ${message}
+    ...    ELSE IF    '${python_URL}' == 'https://python.maocode.cn'    Should End With    ${Current_URL}    ${message}
     Close Window
     Select Window    海龟编辑器官方下载_Python编辑器_少儿编程编辑器_图形化编程编辑器-编程猫
 

@@ -123,7 +123,7 @@ My files_Newfile
     Sleep    1
     Select Window    NEW
     ${Current_URL}=    Get Location
-    Should End With    ${Current_URL}    codemao.cn/
+    Should End With    ${Current_URL}    maocode.cn/
     Close Window
     Select Window    海龟编辑器官方下载_Python编辑器_少儿编程编辑器_图形化编程编辑器-编程猫
     Execute Javascript    document.getElementsByClassName('creat-btn_2RJlL')[0].click()
